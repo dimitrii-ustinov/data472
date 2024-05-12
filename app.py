@@ -66,7 +66,7 @@ def get_df():
     else:
         print("Error:", response.status_code)
 
-@app.route('/data')
+@application.route('/data')
 def get_data():
     df = get_df()
     # Return the entire DataFrame as JSON
