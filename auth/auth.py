@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import os
+#import logging
+
 
 app = Flask(__name__)
 
@@ -29,6 +31,8 @@ class User(db.Model):
 def create_tables():
     db.create_all()
 
+#Register API
+@app.route('/register', methods=['POST', 'GET'])
 def register():
     name = request.json['name']
     login = request.json['login']
