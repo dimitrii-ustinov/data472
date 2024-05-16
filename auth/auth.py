@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+import pymysql
 import os
 #import logging
 
@@ -27,12 +28,16 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % self.username
 
-@app.before_first_request
+@app.before_request
 def create_tables():
+    # The following line will remove this handler, making it
+    # only run on the first request
+    app.before_request_funcs[None].remove(create_tables)
+
     db.create_all()
 
 #Register API
-@app.route('/register', methods=['POST', 'GET'])
+@app.route('/register', methods=['POST'])
 def register():
     name = request.json['name']
     login = request.json['login']
@@ -59,4 +64,4 @@ def login():
         return jsonify({'message': 'Bad login or password'}), 401
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=3306)
