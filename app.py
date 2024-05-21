@@ -1,3 +1,4 @@
+
 from flask import Flask, jsonify, request, Response
 import pandas as pd
 import requests
@@ -50,6 +51,7 @@ params = {
 
 # Make the GET request
 def get_df():
+
     logger.debug("Making GET request to API")
     start_time = time.time()  # Start time of the request
     response = requests.get(url, params=params)
