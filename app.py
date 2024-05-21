@@ -123,6 +123,24 @@ def get_readme():
         logger.error("README.md file not found")
         return 'README.md file not found.', 404
 
+
+@application.route('/dus15/logs')
+def get_logs():
+    key = request.args.get('key')
+    if key != API_KEY:
+        logger.warning("Invalid API key attempt")
+        return jsonify({"error": "Invalid API key"}), 401  # Unauthorized
+    
+    log_file_path = 'logs/app.log'
+    if os.path.exists(log_file_path):
+        with open(log_file_path, 'r') as file:
+            content = file.read()
+            logger.info("Log file returned successfully")
+        return Response(content, mimetype='text/plain')
+    else:
+        logger.error("Log file not found")
+        return 'Log file not found.', 404
+    
 if __name__ == "__main__":
     logger.info("Starting Flask application")
     application.run(host="0.0.0.0", port=8000)
