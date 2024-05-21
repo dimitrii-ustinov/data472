@@ -1,2 +1,2 @@
 # data472
-create an individual project
+Individual project: provide CCC seat data to the central terminal
