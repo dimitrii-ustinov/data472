@@ -133,7 +133,7 @@ Now the web application will be available at the EC2 public IP address from the 
 
 ## Further development
 This project is finished as is. However, it can benefit from further development:
-1. The key is exposed in the code when querying the API. It should be hidden as an environmental variable.
+1. The key was exposed in the code when querying the API. It should be hidden as an environmental variable.
 2. As the dataset is relatively small and receives infrequent updates, It is not stored in a database and redirected to the Central Collection Team (CCT) after preprocessing directly.
 Creation of RDS can help securing the retrieved information in case of crash on the side of outer source API.
 3. There is no unique identifier in the dataset. Creation of a hashed column that could become a unique identifier can help filtering out old data and send only updated data to the CCT.
