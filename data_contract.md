@@ -24,7 +24,7 @@ Description: Retrieves asset data from the external API and returns it in JSON f
 
 Request Parameters:
 
-key (required, string): The API key to authenticate the request. Expected value is "Fish-Sea-Hat-Forest!".
+key (required, string): The API key to authenticate the request. Expected value is "###YOUR-API-KEY###".
 Response:
 
 Success (200 OK): Returns a JSON array of asset records.
@@ -58,7 +58,7 @@ Description: Returns metadata about the fields included in the /dus15/query resp
 
 Request Parameters:
 
-key (required, string): The API key to authenticate the request. Expected value is "Fish-Sea-Hat-Forest!".
+key (required, string): The API key to authenticate the request. Expected value is "###YOUR-API-KEY###".
 Response:
 
 Success (200 OK):
@@ -104,7 +104,7 @@ Description: Returns the content of the README.md file.
 
 Request Parameters:
 
-key (required, string): The API key to authenticate the request. Expected value is "Fish-Sea-Hat-Forest!".
+key (required, string): The API key to authenticate the request. Expected value is "###YOUR-API-KEY###".
 Response:
 
 Success (200 OK): Returns the content of the README.md file as plain text.
@@ -125,7 +125,7 @@ Description: Returns the content of the log file.
 
 Request Parameters:
 
-key (required, string): The API key to authenticate the request. Expected value is "Fish-Sea-Hat-Forest!".
+key (required, string): The API key to authenticate the request. Expected value is "###YOUR-API-KEY###".
 Response:
 
 Success (200 OK): Returns the content of the log file as plain text.
@@ -146,13 +146,13 @@ sh
 curl http://54.252.8.81:8000/
 Example: Get Data
 sh
-curl "http://54.252.8.81:8000/dus15/query?key=Fish-Sea-Hat-Forest!"
+curl "http://54.252.8.81:8000/dus15/query?key=###YOUR-API-KEY###"
 Example: Get Metadata
 sh
-curl "http://54.252.8.81:8000/dus15/metadata?key=Fish-Sea-Hat-Forest!"
+curl "http://54.252.8.81:8000/dus15/metadata?key=###YOUR-API-KEY###"
 Example: Get README
 sh
-curl "http://54.252.8.81:8000/dus15/readme?key=Fish-Sea-Hat-Forest!"
+curl "http://54.252.8.81:8000/dus15/readme?key=###YOUR-API-KEY###"
 Example: Get Logs
 sh
-curl "http://54.252.8.81:8000/dus15/logs?key=Fish-Sea-Hat-Forest!"
+curl "http://54.252.8.81:8000/dus15/logs?key=###YOUR-API-KEY###"
