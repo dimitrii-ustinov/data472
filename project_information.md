@@ -1,6 +1,6 @@
 # DATA472 Individual Project
-** Dimitrii Ustinov **
-** dus15 **
+*Dimitrii Ustinov*
+*dus15*
 
 ## 1. Deployment
 ### 1. Clone this repository into your folder on local machine
