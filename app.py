@@ -10,7 +10,7 @@ import datetime
 application = Flask(__name__)
 
 # Define the correct API key
-API_KEY = "Fish-Sea-Hat-Forest!"
+API_KEY = "INSERT-YOUR-KEY"
 
 # Metadata for the fields in the response
 metadata = [
