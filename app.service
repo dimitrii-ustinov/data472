@@ -1,0 +1,11 @@
+[Unit]
+Description=Data472 individual project flask app
+After=network.target
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/data472
+ExecStart=/home/ubuntu/data472/venv/bin/gunicorn app
+[Install]
+WantedBy=multi-user.target
+
