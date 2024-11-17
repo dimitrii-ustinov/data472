@@ -1,11 +1,11 @@
 # Data description
-The dataset contains information about seats in Christchurch.
+This data contains information about seats in Christchurch.
 
 
 # Structure
 
 The API ports are structured the following way:
-- '/dus15/query' :        'returns the raw json with 3973 rows at the moment'
+- '/dus15/query' :        'returns the raw json with all the rows'
 
 - '/dus15/metadata' :     'returns the metadata table of the following format:
                           "field": "column name"
